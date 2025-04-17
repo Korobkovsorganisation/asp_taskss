@@ -1,0 +1,14 @@
+﻿@model Calc
+@{
+	ViewData["Title"] = "Информация о пользователе";
+}	
+@{
+	<h1>@ViewData["Title"]</h1>
+	<input type="text" value=@Model.term1>
+	<input type="text" value=@Model.term2>
+	<p>Результат: @Model.result</p>
+	<button>+</button>
+	<button>-</button>
+	<button>*</button>
+	<button>/</button>
+}
