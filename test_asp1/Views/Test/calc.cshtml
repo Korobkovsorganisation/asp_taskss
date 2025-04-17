@@ -1,14 +1,17 @@
 ﻿@model Calc
 @{
-	ViewData["Title"] = "Информация о пользователе";
-}	
-@{
-	<h1>@ViewData["Title"]</h1>
-	<input type="text" value=@Model.term1>
-	<input type="text" value=@Model.term2>
-	<p>Результат: @Model.result</p>
-	<button>+</button>
-	<button>-</button>
-	<button>*</button>
-	<button>/</button>
-}
+    ViewData["Title"] = "Информация о пользователе";
+}  
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="text" name="term1" value="@Model.term1" />
+    <input type="text" name="term2" value="@Model.term2" />
+    <p>Результат: @Model.result</p>
+    
+    <button type="submit" name="operation" value="+">+</button>
+    <button type="submit" name="operation" value="-">-</button>
+    <button type="submit" name="operation" value="*">*</button>
+    <button type="submit" name="operation" value="/">/</button>
+</form>
